@@ -51,7 +51,7 @@ export default function HeroSection() {
                     <div className="absolute top-0 left-0 w-full h-full flex items-center">
                         <p className="text-2xl md:text-3xl font-mono text-gray-600 whitespace-nowrap px-4">
                             {identities[index].substring(0, subIndex)}
-                            <span className="inline-block w-0.5 h-7 bg-indigo-600 ml-1 animate-pulse align-middle"></span>
+                            <span className="inline-block w-0.5 h-7 bg-gray-600 ml-1 animate-pulse align-middle"></span>
                         </p>
                     </div>
                 </div>
