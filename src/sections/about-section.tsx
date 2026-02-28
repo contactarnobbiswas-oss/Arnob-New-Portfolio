@@ -3,7 +3,7 @@ import Section from "../components/section";
 export default function AboutSection() {
     return (
         <Section title="About Me">
-            <div className="text-sm/6.5">
+            <div className="text-sm/7.5">
                 <p>
                     I’m Rayan Walker, a full-stack developer passionate about building end-to-end digital experiences that are fast, scalable and user-focused. With strong expertise in both front-end and back-end technologies, I enjoy transforming ideas into fully functional web applications that feel seamless and intuitive.
                 </p>
