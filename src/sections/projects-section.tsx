@@ -6,25 +6,25 @@ export default function ProjectsSection() {
 
     const projects = [
         {
-            title: "Talking Head Videos: Video 1",
+            title: "Talking Head Videos",
             description: "Long-form content",
             image: "/assets/project-1.png",
             videoId: "dQw4w9WgXcQ" // এখানে আপনার ভিডিওর ID টা দিবেন
         },
         {
-            title: "Documentary: Video 2",
+            title: "Documentary",
             description: "Based on true events",
             image: "/assets/project-2.png",
             videoId: "dQw4w9WgXcQ"
         },
         {
-            title: "Business Breakdown: Video 3",
+            title: "Business Breakdown",
             description: "Coming Soon",
             image: "/assets/project-1.png",
             videoId: "" 
         },
         {
-            title: "Productivity and Lifestyle: Video 4",
+            title: "Productivity and Lifestyle",
             description: "Coming Soon",
             image: "/assets/project-2.png",
             videoId: ""
