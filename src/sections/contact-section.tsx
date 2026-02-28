@@ -3,8 +3,9 @@ import Section from "../components/section";
 export default function ContactSection() {
     return (
         <Section title="Contact Me">
-            {/* এখানে text-base ক্লাসটি যোগ করে পুরো টেবিলের লেখা ১ সাইজ বড় করা হয়েছে */}
-            <table className="table-auto mr-auto text-base">
+            {/* mx-auto (ফোনে মাঝখানে), md:ml-0 md:mr-auto (পিসিতে বামে) */}
+            {/* text-center (ফোনে টেক্সট মাঝখানে), md:text-left (পিসিতে বামে) */}
+            <table className="table-auto mx-auto md:ml-0 md:mr-auto text-base text-center md:text-left">
                 <tbody>
                     <tr>
                         <td className="pr-4 py-2">Email:</td>
