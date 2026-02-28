@@ -31,7 +31,6 @@ export default function ProjectsSection() {
 
     return (
         <Section title="My Latest Work">
-            {/* gap-10 ব্যবহার করে ভিডিওগুলোর মাঝে জায়গা বাড়ানো হয়েছে */}
             <div className="flex flex-wrap justify-center items-center gap-10">
                 {projects.map((project) => (
                     <div 
@@ -49,19 +48,22 @@ export default function ProjectsSection() {
                                     e.target.src = `https://img.youtube.com/vi/${project.videoId}/hqdefault.jpg`;
                                 }}
                             />
-                            {/* Play Icon (Hover korle ashbe) */}
+                            {/* Play Icon */}
                             <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity">
                                 <div className="bg-red-600 text-white w-14 h-14 rounded-full flex items-center justify-center pl-1 shadow-2xl text-xl">
                                     ▶
                                 </div>
                             </div>
                         </div>
-                        {/* সাদা অংশ (প্যাডিং কমিয়ে এবং লাইনের গ্যাপ কমিয়ে ঠিক করা হয়েছে) */}
-                        <div className="p-3.5 pt-3">
-                            <h3 className="text-base font-bold text-gray-800 leading-tight">
+
+                        {/* টেক্সট সেকশন - সাইজ ১ ধাপ বাড়ানো হয়েছে */}
+                        <div className="p-4 pt-3.5">
+                            {/* টাইটেল: text-base থেকে বাড়িয়ে text-lg করা হয়েছে */}
+                            <h3 className="text-lg font-bold text-gray-800 leading-tight">
                                 {project.title}
                             </h3>
-                            <p className="text-gray-500 mt-0.5 text-sm leading-snug">
+                            {/* ডেসক্রিপশন: text-sm থেকে বাড়িয়ে text-base করা হয়েছে */}
+                            <p className="text-gray-500 mt-1 text-base leading-snug">
                                 {project.description}
                             </p>
                         </div>
