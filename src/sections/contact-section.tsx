@@ -3,18 +3,18 @@ import Section from "../components/section";
 export default function ContactSection() {
     return (
         <Section title="Contact Me">
-            {/* items-center (ফোনে সব মাঝখানে), md:items-start (পিসিতে বামে) */}
-            <div className="flex flex-col items-center md:items-start space-y-3 text-base">
+            {/* text-center (ফোনে মাঝখানে), md:text-left (পিসিতে বাকি সেকশনের মতো বামে অ্যালাইন) */}
+            <div className="text-base text-center md:text-left space-y-3">
                 
                 {/* ইমেইল লাইন */}
-                <p className="flex flex-row items-center">
-                    <span className="font-medium mr-2">Email:</span>
+                <p>
+                    <span className="font-medium">Email: </span>
                     <span className="text-gray-500">contact.arnobbiswas@gmail.com</span>
                 </p>
 
                 {/* ফোন লাইন */}
-                <p className="flex flex-row items-center">
-                    <span className="font-medium mr-2">Phone:</span>
+                <p>
+                    <span className="font-medium">Phone: </span>
                     <span className="text-gray-500">+8801806581267</span>
                 </p>
                 
