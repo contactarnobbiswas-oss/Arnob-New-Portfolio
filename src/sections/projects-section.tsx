@@ -39,24 +39,31 @@ export default function ProjectsSection() {
                         onClick={() => setPlayingVideo(project.videoId)}
                         className="cursor-pointer hover:-translate-y-2 transition duration-300 max-w-80 border border-gray-100 rounded-2xl block overflow-hidden shadow-sm hover:shadow-xl bg-white"
                     >
-                        <div className="relative group">
+                        {/* 16:9 Aspect Ratio (YouTube Size) */}
+                        <div className="relative group aspect-video">
                             <img
-                                className="w-full h-48 object-cover"
+                                className="w-full h-full object-cover"
                                 src={`https://img.youtube.com/vi/${project.videoId}/maxresdefault.jpg`}
                                 alt={project.title}
                                 onError={(e) => {
                                     e.target.src = `https://img.youtube.com/vi/${project.videoId}/hqdefault.jpg`;
                                 }}
                             />
-                            <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity">
-                                <div className="bg-red-600 text-white w-14 h-14 rounded-full flex items-center justify-center pl-1 shadow-2xl">
+                            {/* Play Icon (Hover korle ashbe) */}
+                            <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div className="bg-red-600 text-white w-14 h-14 rounded-full flex items-center justify-center pl-1 shadow-2xl text-xl">
                                     ▶
                                 </div>
                             </div>
                         </div>
-                        <div className="p-5">
-                            <h3 className="text-lg font-bold text-gray-800">{project.title}</h3>
-                            <p className="text-gray-500 mt-1.5 text-sm leading-relaxed">{project.description}</p>
+                        {/* সাদা অংশ (প্যাডিং কমিয়ে এবং লাইনের গ্যাপ কমিয়ে ঠিক করা হয়েছে) */}
+                        <div className="p-3.5 pt-3">
+                            <h3 className="text-base font-bold text-gray-800 leading-tight">
+                                {project.title}
+                            </h3>
+                            <p className="text-gray-500 mt-0.5 text-sm leading-snug">
+                                {project.description}
+                            </p>
                         </div>
                     </div>
                 ))}
