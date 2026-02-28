@@ -34,26 +34,30 @@ export default function HeroSection() {
                 height={144}
             />
 
-            {/* নাম */}
+            {/* নাম (mt-5 স্পেসিং) */}
             <h2 className="text-3xl md:text-5xl font-semibold mt-5 text-gray-900 leading-tight">
                 Arnob Biswas
             </h2>
 
-            {/* টাইপরাইটার সেকশন - ১০০% স্থির এবং কার্সর ফিক্সড করা হয়েছে */}
-            <div className="relative mt-1.5 inline-flex items-center justify-center">
-                {/* ১. অদৃশ্য টেক্সট: এটি জায়গাটুকু স্থির রাখবে। px-6 দেওয়া হয়েছে যাতে কার্সরের জায়গা থাকে। */}
-                <p className="text-2xl md:text-3xl font-mono invisible pointer-events-none select-none px-6 whitespace-nowrap">
-                    Visual Storyteller
-                </p>
+            {/* টাইপরাইটার সেকশন - পজিশন ১০০% লক করা হয়েছে */}
+            <div className="mt-1.5 flex justify-center w-full">
+                <div className="relative inline-block text-left">
+                    {/* ১. অদৃশ্য বেস: এটি বক্সের উইডথ লক করে রাখবে যাতে বাটন না নড়ে */}
+                    <p className="text-2xl md:text-3xl font-mono invisible whitespace-nowrap px-4">
+                        Visual Storyteller
+                    </p>
 
-                {/* ২. আসল টাইপিং টেক্সট: এটি ইনভিজিবল বক্সের ঠিক ওপরে স্থির হয়ে থাকবে */}
-                <p className="text-2xl md:text-3xl font-mono text-gray-600 absolute inset-0 flex items-center justify-center whitespace-nowrap">
-                    {identities[index].substring(0, subIndex)}
-                    <span className="inline-block w-0.5 h-7 bg-indigo-600 ml-1 animate-pulse align-middle"></span>
-                </p>
+                    {/* ২. আসল টেক্সট: এটি বাম দিক থেকে ফিক্সড হয়ে টাইপ হবে (একচুলও নড়বে না) */}
+                    <div className="absolute top-0 left-0 w-full h-full flex items-center">
+                        <p className="text-2xl md:text-3xl font-mono text-gray-600 whitespace-nowrap px-4">
+                            {identities[index].substring(0, subIndex)}
+                            <span className="inline-block w-0.5 h-7 bg-indigo-600 ml-1 animate-pulse align-middle"></span>
+                        </p>
+                    </div>
+                </div>
             </div>
 
-            {/* বাটন সেকশন (আপনার পছন্দের mt-8 স্পেসিং) */}
+            {/* বাটন সেকশন (mt-8 স্পেসিং) */}
             <div className="mt-8 flex items-center justify-center">
                 <button className="group bg-indigo-600 hover:bg-indigo-700 text-white px-7 py-2.5 rounded-lg inline-flex items-center transition-all">
                     Resume
