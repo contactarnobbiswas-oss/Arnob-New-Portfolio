@@ -9,13 +9,13 @@ export default function ProjectsSection() {
             title: "Talking Head Videos",
             description: "Long-form content",
             image: "/assets/project-1.png",
-            videoId: "dQw4w9WgXcQ" // এখানে আপনার ভিডিওর ID টা দিবেন
+            videoId: "" // এখানে আপনার ভিডিওর ID টা দিবেন
         },
         {
             title: "Documentary",
             description: "Based on true events",
             image: "/assets/project-2.png",
-            videoId: "dQw4w9WgXcQ"
+            videoId: ""
         },
         {
             title: "Business Breakdown",
