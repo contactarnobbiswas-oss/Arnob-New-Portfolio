@@ -28,7 +28,6 @@ export default function HeroSection() {
 
     return (
         <main className="flex flex-col items-center pt-32 max-md:px-4 text-center">
-            {/* প্রোফাইল পিকচার */}
             <img
                 src="/assets/user-image.png"
                 alt="Arnob Biswas"
@@ -37,23 +36,24 @@ export default function HeroSection() {
                 height={144}
             />
 
-            {/* নাম */}
             <h2 className="text-3xl md:text-5xl font-semibold mt-5 text-gray-900 leading-tight">
                 Arnob Biswas
             </h2>
 
-            {/* টাইপরাইটার সেকশন - পজিশন লক করার গোপন ট্রিক */}
-            <div className="mt-1 flex justify-center w-full">
-                {/* এই div-টি ৩টি শব্দের মধ্যে সবথেকে বড় শব্দটির সমান চওড়া করা হয়েছে (w-[260px] বা w-[320px]) */}
-                <div className="w-[260px] md:w-[320px] text-left">
-                    <p className="text-2xl md:text-3xl font-mono text-gray-600 inline-block">
-                        {identities[index].substring(0, subIndex)}
-                        <span className="inline-block w-0.5 h-7 bg-indigo-600 ml-1 animate-pulse align-middle"></span>
-                    </p>
-                </div>
+            {/* টাইপরাইটার সেকশন - পজিশন লক করা হয়েছে */}
+            <div className="relative h-12 flex items-center justify-center mt-1 w-full overflow-hidden">
+                {/* ১. ইনভিজিবল টেক্সট: এটি জায়গাটুকুকে ধরে রাখবে যাতে বাটন বা লেখা না নড়ে */}
+                <p className="text-2xl md:text-3xl font-mono opacity-0 pointer-events-none select-none">
+                    Visual Storyteller
+                </p>
+
+                {/* ২. একচুয়াল টাইপিং টেক্সট: এটি ওপরের ফিক্সড জায়গার ওপর ভাসমান থাকবে */}
+                <p className="text-2xl md:text-3xl font-mono text-gray-600 absolute inset-0 flex items-center justify-center">
+                    {identities[index].substring(0, subIndex)}
+                    <span className="inline-block w-0.5 h-7 bg-indigo-600 ml-1 animate-pulse align-middle"></span>
+                </p>
             </div>
 
-            {/* বাটন সেকশন */}
             <div className="mt-8 flex items-center justify-center">
                 <button className="group bg-indigo-600 hover:bg-indigo-700 text-white px-7 py-2.5 rounded-lg inline-flex items-center transition-all">
                     Resume
@@ -64,9 +64,8 @@ export default function HeroSection() {
                 </button>
             </div>
 
-            {/* সোশ্যাল আইকন */}
             <div className="space-x-6 mt-12 flex items-center justify-center text-gray-600">
-                {/* আগের আইকন কোডগুলো এখানে থাকবে */}
+                {/* সোশ্যাল আইকনগুলো এখানে বসবে */}
             </div>
         </main>
     );
