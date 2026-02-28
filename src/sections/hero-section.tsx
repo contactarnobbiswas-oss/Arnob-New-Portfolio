@@ -2,13 +2,11 @@ import { useState, useEffect } from "react";
 import { ArrowRightIcon } from "lucide-react";
 
 export default function HeroSection() {
-    // আপনার ৩টি পরিচয়
     const identities = ["Content Creator", "Visual Storyteller", "Growth Partner"];
     const [index, setIndex] = useState(0);
     const [subIndex, setSubIndex] = useState(0);
     const [reverse, setReverse] = useState(false);
 
-    // টাইপরাইটার লজিক
     useEffect(() => {
         if (subIndex === identities[index].length + 1 && !reverse) {
             setTimeout(() => setReverse(true), 1500);
@@ -41,23 +39,21 @@ export default function HeroSection() {
                 Arnob Biswas
             </h2>
 
-            {/* টাইপরাইটার সেকশন - পজিশন এবং কার্সর ফিক্সড */}
-            <div className="mt-1.5 relative inline-flex items-center justify-center">
-                {/* ১. অদৃশ্য বেস টেক্সট (এটি উইডথ লক করে এবং কার্সরের জন্য বাড়তি জায়গা রাখে) */}
-                <p className="text-2xl md:text-3xl font-mono invisible pointer-events-none select-none px-5">
+            {/* টাইপরাইটার সেকশন - ১০০% স্থির এবং কার্সর ফিক্সড করা হয়েছে */}
+            <div className="relative mt-1.5 inline-flex items-center justify-center">
+                {/* ১. অদৃশ্য টেক্সট: এটি জায়গাটুকু স্থির রাখবে। px-6 দেওয়া হয়েছে যাতে কার্সরের জায়গা থাকে। */}
+                <p className="text-2xl md:text-3xl font-mono invisible pointer-events-none select-none px-6 whitespace-nowrap">
                     Visual Storyteller
                 </p>
-                
-                {/* ২. আসল টাইপিং টেক্সট (যা একদম মাঝখানে থাকবে এবং লাইন ভাঙবে না) */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <p className="text-2xl md:text-3xl font-mono text-gray-600 whitespace-nowrap">
-                        {identities[index].substring(0, subIndex)}
-                        <span className="inline-block w-0.5 h-7 bg-indigo-600 ml-1 animate-pulse align-middle"></span>
-                    </p>
-                </div>
+
+                {/* ২. আসল টাইপিং টেক্সট: এটি ইনভিজিবল বক্সের ঠিক ওপরে স্থির হয়ে থাকবে */}
+                <p className="text-2xl md:text-3xl font-mono text-gray-600 absolute inset-0 flex items-center justify-center whitespace-nowrap">
+                    {identities[index].substring(0, subIndex)}
+                    <span className="inline-block w-0.5 h-7 bg-indigo-600 ml-1 animate-pulse align-middle"></span>
+                </p>
             </div>
 
-            {/* বাটন সেকশন */}
+            {/* বাটন সেকশন (আপনার পছন্দের mt-8 স্পেসিং) */}
             <div className="mt-8 flex items-center justify-center">
                 <button className="group bg-indigo-600 hover:bg-indigo-700 text-white px-7 py-2.5 rounded-lg inline-flex items-center transition-all">
                     Resume
