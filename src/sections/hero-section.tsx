@@ -13,7 +13,7 @@ export default function HeroSection() {
                 height={144}
             />
 
-            <h2 className="text-4xl md:text-6xl font-semibold mt-6 text-gray-900">
+            <h2 className="text-3xl md:text-5xl font-semibold mt-5 text-gray-900">
                 Arnob Biswas
             </h2>
             
