@@ -2,11 +2,11 @@ import Footer from "./components/footer";
 import LenisScroll from "./components/lenis";
 import AboutSection from "./sections/about-section";
 import ContactSection from "./sections/contact-section";
-import EducationSection from "./sections/education-section";
-import ExperienceSection from "./sections/experience-section";
+
+
 import HeroSection from "./sections/hero-section";
 import ProjectsSection from "./sections/projects-section";
-import SkillsSection from "./sections/skills-section";
+
 
 export default function App() {
     return (
@@ -15,9 +15,9 @@ export default function App() {
             <HeroSection />
             <AboutSection />
             <ProjectsSection />
-            <ExperienceSection />
-            <EducationSection />
-            <SkillsSection />
+           
+    
+            
             <ContactSection />
             <Footer />
         </main>
