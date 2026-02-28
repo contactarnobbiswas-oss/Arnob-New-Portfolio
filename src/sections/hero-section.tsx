@@ -41,7 +41,7 @@ export default function HeroSection() {
             />
 
             <h2 className="text-4xl md:text-6xl font-semibold mt-6">
-                Ryan Walker
+                Arnob Biswas
             </h2>
             <p className="text-2xl md:text-3xl font-mono mt-6">
                 Software Engineer
