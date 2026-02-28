@@ -30,7 +30,7 @@ export default function ProjectsSection() {
     ];
 
     return (
-        <Section title="My Work">
+        <Section title="My Latest Work">
             {/* gap-10 ব্যবহার করে ভিডিওগুলোর মাঝে জায়গা বাড়ানো হয়েছে */}
             <div className="flex flex-wrap justify-center items-center gap-10">
                 {projects.map((project) => (
